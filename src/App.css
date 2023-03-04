@@ -1,0 +1,49 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  /* font-family: 'Inter', sans-serif; */
+  font-size: 1rem;
+  /* line-height: 24px; */
+  font-weight: 400;
+
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+*::-webkit-scrollbar{
+  display: none;
+}
+@font-face {
+  font-family: myfont;
+  src: url(./assets/ClashDisplay-Regular.otf);
+}
+@font-face {
+  font-family: myfontbold;
+  src: url(./assets/ClashDisplay-Bold.otf);
+}
+*{
+  font-family: myfont, sans-serif;
+  font-size: 17px;
+}
+.bold{
+  font-family: myfontbold, sans-serif;
+}
+
+
+@layer base {
+  body {
+    @apply text-primary bg-white;
+  }
+  section {
+    @apply py-[35px] lg:py-[50px];
+  }
+  .pad{
+    @apply px-[1.5rem] md:px-[3rem] lg:px-[6rem];
+  }
+}
