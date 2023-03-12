@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    
-
     screens: {
       sm: "540px",
       md: "768px",
@@ -15,13 +10,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#000000",
-        accent: "#00a856",
-        grey: {
-          DEFAULT: "#6c757d",
-          1: "#e4e7ee",
+        primary: {
+          DEFAULT: "#2E5CFF",
+          1: "#172E80",
         },
-        white: "#f5f5f5",
+        grey: {
+          DEFAULT: "#777777",
+          1: "#171717",
+        },
+        white: "#FBFBFB",
       },
       backgroundImage: {
         // hero: 'url("/src/assets/img/heroimg.jpg")',

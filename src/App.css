@@ -3,7 +3,6 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  /* font-family: 'Inter', sans-serif; */
   font-size: 1rem;
   /* line-height: 24px; */
   font-weight: 400;
@@ -21,29 +20,35 @@
 }
 @font-face {
   font-family: myfont;
-  src: url(./assets/ClashDisplay-Regular.otf);
+  src: url(./assets/ProductSansRegular.ttf);
 }
 @font-face {
-  font-family: myfontbold;
-  src: url(./assets/ClashDisplay-Bold.otf);
+  font-family: myboldfont;
+  src: url(./assets/ProductSansBold.ttf);
 }
+
 *{
   font-family: myfont, sans-serif;
   font-size: 17px;
 }
 .bold{
-  font-family: myfontbold, sans-serif;
+  font-family: myboldfont, sans-serif;
 }
+
+
 
 
 @layer base {
   body {
-    @apply text-primary bg-white;
+    @apply text-grey bg-white;
   }
   section {
     @apply py-[35px] lg:py-[50px];
   }
   .pad{
     @apply px-[1.5rem] md:px-[3rem] lg:px-[6rem];
+  }
+  button{
+    @apply py-3 border px-6 rounded-2xl border-primary;
   }
 }

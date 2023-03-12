@@ -1,22 +1,29 @@
-import { useState } from 'react'
-import './App.css'
-import Banner from './components/Banner'
-import Features from './components/Features'
-import Featuretwo from './components/Featuretwo'
-import Footer from './components/Footer'
-import Nav from './components/Nav'
+import react from "react";
+import "./App.css";
+import Banner from "./components/Banner";
+import Content from "./components/Content";
+import Faq from "./components/Faq";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import Newsletter from "./components/Newsletter";
+import Services from "./components/Services";
+import Testimonial from "./components/Testimonial";
+
 
 function App() {
 
   return (
-    <div className="App">
+    <div>
       <Nav />
       <Banner />
-      <Features />
-      <Featuretwo />
+      <Content />
+      <Services />
+      <Faq />
+      <Testimonial />
+      <Newsletter />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

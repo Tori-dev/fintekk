@@ -1,53 +1,77 @@
-import React, {useState} from "react";
-import mastercard from "../assets/img/mastercard.svg";
+import React, { useState } from "react";
 import { CgClose, CgChevronDown, CgMenuRightAlt } from "react-icons/cg";
 
 function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
 
   return (
-    <div className="pad bg-primary text-white py-6 flex items-center justify-between sticky top-0">
+    <nav className="pad bg-white text-grey-1 py-3 md:py-5 lg:py-6 z-10 flex items-center justify-between sticky top-0 text-[22px] shadow-md">
       {/* LOGO */}
-      <span className="flex items-center gap-2 tracking-widest z-10">
-        <img className="w-10" src={mastercard} alt="logo" />
-        <h1 className={`${mobileNav ? 'text-primary' : 'text-white'} bold`}>Fintekh</h1>
+      <span className="flex items-center gap-2 z-10 text-primary">
+        <h1>
+          <a className="bold text-2xl" href="#">
+            Fintekk
+          </a>
+        </h1>
       </span>
 
       {/* DESKTOP NAV */}
       <div className="hidden lg:flex">
-        <ul className="flex gap-12 text-lg uppercase">
+        <ul className="flex gap-12 text-lg capitalize text-[22px]">
           <a href="#">
-            <li className="flex gap-5 items-center">
-              product <CgChevronDown />
-            </li>
+            <li>home</li>
           </a>
           <a href="#">
             <li>about</li>
           </a>
           <a href="#">
-            <li>blog</li>
+            <li>FAQs</li>
           </a>
           <a href="#">
-            <li>faq</li>
+            <li>contact us</li>
           </a>
         </ul>
+      </div>
+
+      <div className="gap-4 items-center bold hidden lg:flex">
+        <button className="text-primary">Login</button>
+        <button className="bg-primary text-white">Sign Up for Free</button>
       </div>
 
       {/* MOBILE NAV ICONS */}
-      <span onClick={()=> setMobileNav(!mobileNav)} className={`${mobileNav ? 'text-primary':'text-white'} lg:hidden z-10`}>
-        {mobileNav ? <CgClose /> : <CgMenuRightAlt />}
+      <span
+        onClick={() => setMobileNav(!mobileNav)}
+        className="text-primary-1 lg:hidden z-10"
+      >
+        {mobileNav ? (
+          <CgClose className="text-xl" />
+        ) : (
+          <CgMenuRightAlt className="text-xl" />
+        )}
       </span>
 
       {/* MOBILE NAV MENU */}
-      <div className= {`${mobileNav ? 'left-0':'-left-full'} bg-white uppercase text-primary lg:hidden absolute w-full flex justify-center h-screen items-center top-0 transition-all`}>
-        <ul className="flex gap-7 flex-col">
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">faq</a></li>
+      <div
+        className={`${
+          mobileNav ? "left-0" : "-left-full"
+        } bg-white capitalize text-primary lg:hidden absolute w-full flex justify-center h-screen items-center top-0 transition-all bold`}
+      >
+        <ul className="flex gap-7 flex-col bold">
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">FAQs</a>
+          </li>
+          <li>
+            <a href="#">contact us</a>
+          </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
 
